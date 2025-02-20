@@ -19,6 +19,8 @@ This Python application parses Burp Suite request and response logs stored in XM
 Create an instance and read the exported Burp Suite file.
 
 ```python
+from burp_reader import BurpRequests
+
 burp_requests = BurpRequests("path/to/burp_export.xml")
 ```
 
