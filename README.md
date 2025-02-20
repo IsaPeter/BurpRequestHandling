@@ -44,3 +44,21 @@ Decoded Request: POST /csrf_3.php HTTP/1.1\nHost: 127.0.0.1:8888\nContent-Length
 Response MIME Type: HTML
 Decoded Response: HTTP/1.1 200 OK\nDate: Mon, 17 Feb 2025 15:14:09 GMT\nServer: Apache/2.4.7 (Ubuntu)\n...
 ```
+
+
+## Extracting Requests Only
+
+Use the burp_request_extract python library.
+
+```python
+from burp_request_extract import BurpReader
+
+reader = BurpReader()
+reader.parse_requests(file_path='path/to/burp_file')
+raw_http_requests = reader.get_raw_requests()
+```
+
+
+
+
+
